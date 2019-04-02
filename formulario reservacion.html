@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Estudiante</title>
+    <link rel="stylesheet" href="css/formulario_hotel.css">
+  </head>
+  <body>
+
+    <div class="container">
+  <div id="contact">
+    <h3>Nuevo Reservacion</h3>
+    <h4>Ingresa la información solicitada.</h4>
+    <fieldset>
+      <input placeholder="Nombre" id="nombre" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Correo" id="correo" type="text" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Numero" id="num" type="number" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Dia entrada" id="de" type="number" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Hora" id="hora" type="number" tabindex="3" required>
+    </fieldset>
+      <fieldset>
+      <input placeholder="Dia salida" id="ds" type="number" tabindex="3" required>
+    </fieldset>
+        <fieldset>
+      <input placeholder="Hora" id="hora2" type="number" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Fotografía" id="imagenp" type="file" tabindex="3" required>
+    </fieldset>
+      <button type="tel" id="contact-submit" onclick="Guardar_reservacion()">Guardar</button>
+    </fieldset>
+    </div>
+
+
+</div>
+
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script src="frontend/reservacionFE.js"></script>
+  </body>
+</html>

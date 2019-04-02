@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bon voyage</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css"  href="css/account.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation
+    ==========================================-->
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="#page-top">Bon voyage</a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right">
+       <li><a href="Index.html" class="page-scroll">Inicio</a></li>
+        <li><a href="login.html" class="page-scroll">Iniciar sesiòn</a></li>
+        <li><a href="account.html" class="page-scroll">Crear cuenta</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+</nav>
+   <link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="text/css"/>
+<div class="body-content">
+  <div class="module">
+    <h1>Crear cuenta</h1>
+    <class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">
+      <div class="alert alert-error"></div>
+      <input id="Usuario" type="text" placeholder="Usuario" name="username" required />
+      <input id="correo" type="email" placeholder="Correo" name="email" required />
+      <input id="clave" type="password" placeholder="Contraseña" name="password" autocomplete="new-password" required />
+      <div class="avatar"><label>Selecciona tu foto: </label><input id = "imagen" type="file" name="avatar" accept="image/*" required /></div>
+      <input type="submit" value="Registrarse" name="register" class="btn btn-block btn-primary" onclick="botonguardarclick()"/>
+
+  </div>
+</div>
+
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+    <script src="Frontend/administradorFE.JS"></script>
+    <script type="text/javascript">
+
+    
+   function botonguardarclick() //  Despues de presionar el boton, se viene aqui donde obtiene los valores
+       {
+           var usuarioinstanciado = new ADMINISTRADOR(0, //  Un objeto con todos los atributos que le agrega el usuario
+           document.getElementById("Usuario").value,
+            document.getElementById("correo").value,
+           document.getElementById("clave").value,
+     imagenenbase64,""
+           );
+
+           usuarioinstanciado.Guardar().then(function(response) {
+console.log("Success!", response);
+       alert("Guardado con exito");
+
+}, function(error) {
+console.error("Failed!", error);
+        alert("Error " + error);
+
+});
+}
+</script>
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="js/nivo-lightbox.js"></script> 
+<script type="text/javascript" src="js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script> 
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
